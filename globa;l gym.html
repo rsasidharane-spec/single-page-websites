@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Gym In | Memberships from ₹500</title>
+<meta name="description" content="Global Gym In memberships: monthly ₹500, 3 month ₹1200, annual ₹4000. Pick a plan and book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0A0A0A',
+        coal: '#151515',
+        ash: '#1F1F1F',
+        bone: '#EDEDED',
+        mute: '#A8A8A8',
+        blood: '#E4161B',
+        blooddark: '#B50F13'
+      },
+      fontFamily: {
+        head: ['"Black Ops One"', 'Impact', 'sans-serif'],
+        body: ['Oswald', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Oswald', system-ui, sans-serif; letter-spacing: 0.01em; color-scheme: dark; }
+  .font-head { letter-spacing: 0.02em; font-weight: 400 !important; font-synthesis: none; }
+  .view { display: none; }
+  .view.active { display: block; }
+  .hero-word { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .hero-word:nth-child(2) { animation-delay: .12s; }
+  .hero-word:nth-child(3) { animation-delay: .24s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+  :focus-visible { outline: 3px solid #E4161B; outline-offset: 2px; }
+  .nav-btn[aria-current="page"] { background: #E4161B; color: #fff; }
+  .tab-btn[aria-pressed="true"] { background: #E4161B; color: #fff; border-color: #E4161B; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero-word { animation: none; }
+  }
+  .rugged { color: #EDEDED; text-shadow: 4px 4px 0 #E4161B; }
+  .rugged .text-blood { text-shadow: 4px 4px 0 #EDEDED33; }
+  .stripes { background: repeating-linear-gradient(45deg, #E4161B 0 14px, #0A0A0A 14px 28px); }
+  .grain { position: relative; }
+  .grain::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .12;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .7 0'/></filter><rect width='200' height='200' filter='url(%23g)'/></svg>"); }
+</style>
+</head>
+<body class="bg-ink text-bone antialiased">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5"/></filter></svg>
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-blood focus:text-white focus:p-3">Skip to content</a>
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-ink border-b-4 border-blood">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+    <button data-nav="home" class="flex items-center gap-2 font-head font-black text-2xl sm:text-3xl leading-none text-bone">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="4" fill="#E4161B"/><rect x="5" y="14" width="4" height="6" fill="#0A0A0A"/><rect x="25" y="14" width="4" height="6" fill="#0A0A0A"/><rect x="9" y="11" width="3" height="12" fill="#0A0A0A"/><rect x="22" y="11" width="3" height="12" fill="#0A0A0A"/><rect x="12" y="16" width="10" height="2" fill="#0A0A0A"/></svg>
+      GLOBAL GYM IN
+    </button>
+    <nav aria-label="Main" class="hidden md:flex items-center gap-1 text-sm font-semibold">
+      <button data-nav="home" class="nav-btn px-4 py-2 rounded">Home</button>
+      <button data-nav="plans" class="nav-btn px-4 py-2 rounded">Plans</button>
+      <button data-nav="join" class="nav-btn px-4 py-2 rounded">Join</button>
+      <button data-nav="about" class="nav-btn px-4 py-2 rounded">About</button>
+    </nav>
+    <button data-nav="join" class="hidden md:inline-block bg-blood hover:bg-blooddark text-white font-bold px-5 py-2 rounded transition-colors">Book on WhatsApp</button>
+    <button id="menuBtn" class="md:hidden p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav id="mobileNav" aria-label="Mobile" class="hidden md:hidden border-t border-bone/10 bg-coal px-4 pb-4 pt-2 grid gap-1 font-semibold">
+    <button data-nav="home" class="nav-btn text-left px-4 py-3 rounded">Home</button>
+    <button data-nav="plans" class="nav-btn text-left px-4 py-3 rounded">Plans</button>
+    <button data-nav="join" class="nav-btn text-left px-4 py-3 rounded">Join</button>
+    <button data-nav="about" class="nav-btn text-left px-4 py-3 rounded">About</button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HOME -->
+<section id="home" class="view active" aria-label="Home">
+  <div class="bg-ink text-bone overflow-hidden grain relative">
+    <div class="absolute -right-10 top-0 h-full w-72 bg-blood hidden md:block" style="clip-path:polygon(45% 0,100% 0,55% 100%,0 100%)" aria-hidden="true"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 pt-14 pb-16 md:pt-24 md:pb-24 grid md:grid-cols-12 gap-10 items-end">
+      <div class="md:col-span-8">
+        <h1 class="rugged font-head leading-[0.9] text-[3.4rem] sm:text-[6rem] md:text-[7.5rem]" style="filter:url(#rough)">
+          <span class="hero-word block">GLOBAL</span>
+          <span class="hero-word block text-blood">GYM IN</span>
+        </h1>
+        <p class="mt-5 font-head text-2xl sm:text-3xl text-bone/90">Show up. Lift more. Repeat.</p>
+        <p class="mt-8 max-w-xl text-lg text-bone/80">Global Gym In gives you a full floor of weights and cardio equipment at a price that makes skipping a month hard to justify. Pick a plan, message us, and start training.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <button data-nav="join" class="bg-blood hover:bg-blooddark text-white font-bold px-7 py-4 rounded transition-colors">Join the gym</button>
+          <button data-nav="plans" class="border-2 border-bone/60 hover:bg-bone hover:text-ink font-bold px-7 py-4 rounded transition-colors">See membership prices</button>
+        </div>
+      </div>
+      <div class="md:col-span-4">
+        <div class="bg-coal text-bone rounded-lg p-5 border-4 border-blood">
+          <p class="font-semibold text-sm text-mute">Pick your plan</p>
+          <ul class="mt-3 divide-y divide-bone/10" id="heroPlans"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <h2 class="font-head font-extrabold text-4xl sm:text-5xl">What you get on the floor</h2>
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article class="bg-coal p-6 rounded border-l-8 border-blood">
+        <h3 class="font-head font-bold text-2xl">Free weights</h3>
+        <p class="mt-2 text-mute">Dumbbells, barbells and plates for strength work at every level.</p>
+      </article>
+      <article class="bg-coal p-6 rounded border-l-8 border-bone/50">
+        <h3 class="font-head font-bold text-2xl">Cardio machines</h3>
+        <p class="mt-2 text-mute">Treadmills, cycles and cross trainers for warm-ups and endurance.</p>
+      </article>
+      <article class="bg-coal p-6 rounded border-l-8 border-blood">
+        <h3 class="font-head font-bold text-2xl">Machine circuits</h3>
+        <p class="mt-2 text-mute">Guided strength machines that help beginners train safely.</p>
+      </article>
+      <article class="bg-coal p-6 rounded border-l-8 border-bone/50">
+        <h3 class="font-head font-bold text-2xl">Trainer guidance</h3>
+        <p class="mt-2 text-mute">Ask our staff about form, routines and goals when you join.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans" class="view" aria-label="Membership plans">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+    <h2 class="font-head font-black text-4xl sm:text-5xl">Membership plans</h2>
+    <p class="mt-3 max-w-xl text-mute">Pay monthly, or commit for longer and pay less per month. Prices are in Indian rupees.</p>
+    <div class="grain relative mt-8 overflow-hidden rounded-lg border-4 border-blood bg-ink" aria-label="Gym poster">
+      <div class="stripes absolute inset-y-0 right-0 w-10 sm:w-16" aria-hidden="true"></div>
+      <div class="relative grid sm:grid-cols-5 gap-6 items-center p-6 sm:p-10 pr-14 sm:pr-24">
+        <div class="sm:col-span-3">
+          <p class="font-head text-blood text-xl">No excuses</p>
+          <p class="rugged font-head text-3xl sm:text-5xl leading-[1.05] mt-1" style="filter:url(#rough)">PAIN IS TEMPORARY. PROGRESS STAYS.</p>
+          <p class="mt-4 text-mute text-lg">Memberships from <span class="text-bone font-semibold">₹500</span> a month.</p>
+        </div>
+        <svg viewBox="0 0 260 120" class="sm:col-span-2 w-full h-auto" aria-hidden="true">
+          <rect x="10" y="56" width="240" height="8" fill="#BDBDBD"/>
+          <rect x="40" y="14" width="16" height="92" fill="#E4161B"/><rect x="58" y="26" width="12" height="68" fill="#EDEDED"/><rect x="72" y="36" width="8" height="48" fill="#EDEDED"/>
+          <rect x="204" y="14" width="16" height="92" fill="#E4161B"/><rect x="190" y="26" width="12" height="68" fill="#EDEDED"/><rect x="180" y="36" width="8" height="48" fill="#EDEDED"/>
+        </svg>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-wrap gap-2" id="filterTabs" role="group" aria-label="Filter plans"></div>
+    <div id="planGrid" class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join" class="view" aria-label="Join the gym">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 grid lg:grid-cols-5 gap-10">
+    <div class="lg:col-span-2">
+      <h2 class="font-head font-black text-4xl sm:text-5xl">Book your membership</h2>
+      <p class="mt-4 text-mute">Fill this in and we open WhatsApp with your details already typed. Send the message and our team confirms your start date.</p>
+      <div id="summary" class="mt-8 bg-ash text-bone rounded-lg p-6">
+        <p class="text-sm text-bone/70">Your selection</p>
+        <p id="sumName" class="font-head font-extrabold text-3xl mt-1">Choose a plan</p>
+        <p id="sumPrice" class="font-head font-black text-6xl text-blood mt-2">₹0</p>
+        <p id="sumDetail" class="text-sm text-bone/70 mt-2">Select a category and plan to see the price.</p>
+      </div>
+    </div>
+    <form id="joinForm" class="lg:col-span-3 bg-coal rounded-lg p-6 sm:p-8 grid gap-5" novalidate>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="fName" class="block font-semibold mb-1">Full name</label>
+          <input id="fName" type="text" autocomplete="name" class="w-full border-2 border-bone/20 rounded px-4 py-3 bg-ink text-bone" required>
+          <p class="err text-red-400 text-sm mt-1 hidden" data-for="fName">Enter your name.</p>
+        </div>
+        <div>
+          <label for="fPhone" class="block font-semibold mb-1">Phone number</label>
+          <input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" class="w-full border-2 border-bone/20 rounded px-4 py-3 bg-ink text-bone" required>
+          <p class="err text-red-400 text-sm mt-1 hidden" data-for="fPhone">Enter a valid phone number (at least 10 digits).</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="fCat" class="block font-semibold mb-1">Membership type</label>
+          <select id="fCat" class="w-full border-2 border-bone/20 rounded px-4 py-3 bg-ink text-bone" required></select>
+          <p class="err text-red-400 text-sm mt-1 hidden" data-for="fCat">Choose a membership type.</p>
+        </div>
+        <div>
+          <label for="fPlan" class="block font-semibold mb-1">Plan</label>
+          <select id="fPlan" class="w-full border-2 border-bone/20 rounded px-4 py-3 bg-ink text-bone" required disabled>
+            <option value="">Choose a type first</option>
+          </select>
+          <p class="err text-red-400 text-sm mt-1 hidden" data-for="fPlan">Choose a plan.</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="fDate" class="block font-semibold mb-1">Start date</label>
+          <input id="fDate" type="date" class="w-full border-2 border-bone/20 rounded px-4 py-3 bg-ink text-bone" required>
+          <p class="err text-red-400 text-sm mt-1 hidden" data-for="fDate">Pick a start date from today onward.</p>
+        </div>
+        <div>
+          <label for="fTime" class="block font-semibold mb-1">Preferred workout time</label>
+          <select id="fTime" class="w-full border-2 border-bone/20 rounded px-4 py-3 bg-ink text-bone">
+            <option>Early morning</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+            <option>Night</option>
+          </select>
+        </div>
+      </div>
+      <fieldset>
+        <legend class="font-semibold mb-2">Main goal</legend>
+        <div class="flex flex-wrap gap-2" id="goals"></div>
+      </fieldset>
+      <div>
+        <label for="fNote" class="block font-semibold mb-1">Anything else we should know? (optional)</label>
+        <textarea id="fNote" rows="3" class="w-full border-2 border-bone/20 rounded px-4 py-3 bg-ink text-bone" placeholder="Injuries, questions, a friend joining with you"></textarea>
+      </div>
+      <button type="submit" class="bg-blood hover:bg-blooddark text-white font-bold text-lg px-7 py-4 rounded transition-colors flex items-center justify-center gap-2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/><path d="M9 8.5c0 3.5 3 6.5 6.500 6.500l1-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>
+        Send on WhatsApp
+      </button>
+      <p id="formMsg" class="text-sm text-mute" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="view" aria-label="About">
+  <div class="bg-ash text-bone">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="font-head font-black text-4xl sm:text-5xl leading-[0.95]">A gym built for people who train, not people who browse</h2>
+        <p class="mt-6 text-bone/80 max-w-lg">Global Gym In keeps things simple: honest equipment, clear prices and a team that learns your name. Whether you are lifting for the first time or coming back after a break, you pay one fixed fee and train as often as you like.</p>
+        <button data-nav="join" class="mt-8 bg-blood hover:bg-blooddark text-white font-bold px-7 py-4 rounded transition-colors">Start with a plan</button>
+      </div>
+      <div id="rack" class="grain relative rounded-lg border-4 border-blood bg-coal p-3" role="img" aria-label="Rack of dumbbells arranged from light to heavy"></div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <h3 class="font-head font-extrabold text-4xl">The gym in numbers</h3>
+    <dl class="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-5" id="stats"></dl>
+      </div>
+</section>
+
+</main>
+
+<footer class="bg-ink border-t-4 border-blood">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-mute">
+    <p class="font-head font-black text-xl text-bone">GLOBAL GYM IN</p>
+    <p>WhatsApp: <a class="underline font-semibold text-bone" href="https://wa.me/917010771549">+91 70107 71549</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var PHONE = '917010771549';
+  var PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260"><rect width="400" height="260" fill="#0A0A0A"/><g fill="#E4161B"><rect x="90" y="110" width="22" height="40"/><rect x="288" y="110" width="22" height="40"/><rect x="118" y="90" width="18" height="80"/><rect x="264" y="90" width="18" height="80"/><rect x="136" y="124" width="128" height="12"/></g></svg>');
+
+  var PLANS = [
+    { id: 'monthly', name: 'Monthly membership', category: 'Monthly', price: 500, period: 'per month', months: 1,
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=70',
+      description: 'Pay month by month with no long commitment. A good way to try the gym.',
+      perks: ['Full access to the gym floor', 'Weights and cardio equipment', 'Cancel any month'] },
+    { id: 'quarter', name: '3 month plan', category: '3 Month', price: 1200, period: 'for 3 months', months: 3,
+      image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=70',
+      description: 'Three months is long enough to build a routine and see real progress.',
+      perks: ['Full access to the gym floor', 'Weights and cardio equipment', 'Works out to ₹400 a month'] },
+    { id: 'annual', name: 'Annual membership', category: 'Annual', price: 4000, period: 'for 12 months', months: 12,
+      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=70',
+      description: 'Our lowest monthly cost, for members who train all year.',
+      perks: ['Full access to the gym floor', 'Weights and cardio equipment', 'Works out to about ₹333 a month'] }
+  ];
+  var CATEGORIES = ['All'].concat(PLANS.map(function (p) { return p.category; }));
+  var GOALS = ['Build muscle', 'Lose weight', 'Get stronger', 'Stay fit', 'Learn the basics'];
+  var STATS = [
+    { value: 100, suffix: '+', label: 'Active members' },
+    { value: 99, suffix: '+', label: 'Machines' },
+    { value: 8, suffix: ' hrs', label: 'Gym open per day' },
+    { value: 10, suffix: ' yrs', label: 'Experience' }
+  ];
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function inr(n) { return '₹' + n.toLocaleString('en-IN'); }
+  function imgTag(src, alt, cls) {
+    return '<img src="' + src + '" alt="' + alt + '" class="' + cls + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + PLACEHOLDER + '\'">';
+  }
+
+  /* ---------- Navigation ---------- */
+  var statsRun = false;
+  function show(id) {
+    if (!document.getElementById(id)) id = 'home';
+    $$('.view').forEach(function (v) { v.classList.toggle('active', v.id === id); });
+    $$('[data-nav]').forEach(function (b) {
+      if (b.classList.contains('nav-btn')) {
+        if (b.dataset.nav === id) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+      }
+    });
+    $('#mobileNav').classList.add('hidden');
+    $('#menuBtn').setAttribute('aria-expanded', 'false');
+    window.scrollTo(0, 0);
+    if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+    if (id === 'about' && !statsRun) { runStats(); }
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-nav]');
+    if (t) { e.preventDefault(); show(t.dataset.nav); }
+    var p = e.target.closest('[data-pick]');
+    if (p) { choosePlan(p.dataset.pick); show('join'); }
+  });
+  $('#menuBtn').addEventListener('click', function () {
+    var m = $('#mobileNav'); var open = m.classList.toggle('hidden') === false;
+    this.setAttribute('aria-expanded', String(open));
+  });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1)); });
+
+  /* ---------- Hero plan list ---------- */
+  $('#heroPlans').innerHTML = PLANS.map(function (p) {
+    return '<li><button data-pick="' + p.id + '" class="w-full flex items-center justify-between py-4 text-left hover:text-blood transition-colors">' +
+      '<span class="font-semibold">' + p.name + '<span class="block text-sm text-mute font-normal">' + p.period + '</span></span>' +
+      '<span class="font-head font-black text-3xl">' + inr(p.price) + '</span></button></li>';
+  }).join('');
+
+  /* ---------- Catalog ---------- */
+  var activeCat = 'All';
+  function renderTabs() {
+    $('#filterTabs').innerHTML = CATEGORIES.map(function (c) {
+      return '<button class="tab-btn border-2 border-bone/40 px-5 py-2 rounded font-semibold hover:bg-blood hover:border-blood hover:text-white transition-colors" data-cat="' + c + '" aria-pressed="' + (c === activeCat) + '">' + c + '</button>';
+    }).join('');
+  }
+  function renderPlans() {
+    var list = PLANS.filter(function (p) { return activeCat === 'All' || p.category === activeCat; });
+    $('#planGrid').innerHTML = list.map(function (p) {
+      return '<article class="bg-coal rounded-lg overflow-hidden flex flex-col border-2 border-bone/10"><div class="stripes h-3"></div>' +
+        imgTag(p.image, p.name, 'w-full h-48 object-cover grayscale contrast-125') +
+        '<div class="p-6 flex flex-col flex-1">' +
+        '<h3 class="font-head font-extrabold text-3xl">' + p.name + '</h3>' +
+        '<p class="mt-1"><span class="font-head font-black text-5xl text-blood">' + inr(p.price) + '</span> <span class="text-mute">' + p.period + '</span></p>' +
+        '<p class="mt-3 text-mute">' + p.description + '</p>' +
+        '<ul class="mt-4 grid gap-2 text-sm">' + p.perks.map(function (k) {
+          return '<li class="flex gap-2"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E4161B" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg>' + k + '</li>';
+        }).join('') + '</ul>' +
+        '<button data-pick="' + p.id + '" class="mt-6 bg-blood hover:bg-blooddark text-white font-bold px-6 py-3 rounded transition-colors">Choose ' + p.category.toLowerCase() + ' plan</button>' +
+        '</div></article>';
+    }).join('');
+  }
+  $('#filterTabs').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cat]'); if (!b) return;
+    activeCat = b.dataset.cat; renderTabs(); renderPlans();
+  });
+
+  /* ---------- Form ---------- */
+  var fCat = $('#fCat'), fPlan = $('#fPlan');
+  fCat.innerHTML = '<option value="">Select type</option>' + PLANS.map(function (p) { return '<option value="' + p.category + '">' + p.category + '</option>'; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).join('');
+  $('#goals').innerHTML = GOALS.map(function (g, i) {
+    return '<label class="cursor-pointer"><input type="radio" name="goal" value="' + g + '" class="peer sr-only"' + (i === 0 ? ' checked' : '') + '><span class="block border-2 border-bone/20 peer-checked:bg-blood peer-checked:text-white peer-checked:border-blood peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-blood px-4 py-2 rounded font-medium">' + g + '</span></label>';
+  }).join('');
+
+  var today = new Date(); today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  var iso = today.toISOString().slice(0, 10);
+  $('#fDate').min = iso; $('#fDate').value = iso;
+
+  function fillPlans(cat) {
+    var items = PLANS.filter(function (p) { return p.category === cat; });
+    fPlan.disabled = items.length === 0;
+    fPlan.innerHTML = items.length
+      ? '<option value="">Select plan</option>' + items.map(function (p) { return '<option value="' + p.id + '">' + p.name + ' (' + inr(p.price) + ')</option>'; }).join('')
+      : '<option value="">Choose a type first</option>';
+    if (items.length === 1) fPlan.value = items[0].id;
+    updateSummary();
+  }
+  function updateSummary() {
+    var p = PLANS.filter(function (x) { return x.id === fPlan.value; })[0];
+    $('#sumName').textContent = p ? p.name : 'Choose a plan';
+    $('#sumPrice').textContent = p ? inr(p.price) : '₹0';
+    $('#sumDetail').textContent = p ? 'Billed ' + p.period + '. Starts on the date you pick.' : 'Select a type and plan to see the price.';
+  }
+  function choosePlan(id) {
+    var p = PLANS.filter(function (x) { return x.id === id; })[0]; if (!p) return;
+    fCat.value = p.category; fillPlans(p.category); fPlan.value = p.id; updateSummary();
+  }
+  fCat.addEventListener('change', function () { fillPlans(fCat.value); });
+  fPlan.addEventListener('change', updateSummary);
+
+  function setErr(id, bad) {
+    var m = $('.err[data-for="' + id + '"]'); if (m) m.classList.toggle('hidden', !bad);
+    var f = document.getElementById(id); if (f) f.setAttribute('aria-invalid', String(bad));
+    return bad;
+  }
+  $('#joinForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = $('#fName').value.trim(), phone = $('#fPhone').value.trim();
+    var digits = phone.replace(/\D/g, '');
+    var bad = [
+      setErr('fName', name.length < 2),
+      setErr('fPhone', digits.length < 10),
+      setErr('fCat', !fCat.value),
+      setErr('fPlan', !fPlan.value),
+      setErr('fDate', !$('#fDate').value || $('#fDate').value < iso)
+    ].some(Boolean);
+    if (bad) { $('#formMsg').textContent = 'Check the highlighted fields and try again.'; return; }
+    var p = PLANS.filter(function (x) { return x.id === fPlan.value; })[0];
+    var goal = ($('input[name="goal"]:checked') || {}).value || '';
+    var note = $('#fNote').value.trim();
+    var lines = [
+      'Hello Global Gym In, I want to join.',
+      '',
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Plan: ' + p.name + ' (' + inr(p.price) + ' ' + p.period + ')',
+      'Start date: ' + $('#fDate').value,
+      'Workout time: ' + $('#fTime').value,
+      'Goal: ' + goal
+    ];
+    if (note) lines.push('Note: ' + note);
+    var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(lines.join('\n'));
+    $('#formMsg').textContent = 'Opening WhatsApp. Press send there to confirm your request.';
+    window.open(url, '_blank', 'noopener');
+  });
+
+  /* ---------- Stats counters ---------- */
+  $('#stats').innerHTML = STATS.map(function (s) {
+    return '<div class="bg-coal rounded-lg p-6 border-b-8 border-blood"><dd class="font-head font-black text-6xl"><span class="count" data-to="' + s.value + '">0</span>' + s.suffix + '</dd><dt class="mt-1 text-mute">' + s.label + '</dt></div>';
+  }).join('');
+  function runStats() {
+    statsRun = true;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $$('.count').forEach(function (el) {
+      var to = +el.dataset.to;
+      if (reduce) { el.textContent = to.toLocaleString('en-IN'); return; }
+      var start = null;
+      function step(t) {
+        if (!start) start = t;
+        var k = Math.min((t - start) / 1400, 1);
+        el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))).toLocaleString('en-IN');
+        if (k < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* ---------- Dumbbell rack ---------- */
+  function buildRack() {
+    var o = '<svg viewBox="0 0 480 300" class="w-full h-auto" aria-hidden="true">';
+    o += '<rect x="14" y="20" width="10" height="270" fill="#2b2b2b"/><rect x="456" y="20" width="10" height="270" fill="#2b2b2b"/>';
+    o += '<rect x="0" y="290" width="480" height="6" fill="#E4161B"/>';
+    [130, 250].forEach(function (sy, t) {
+      o += '<rect x="14" y="' + sy + '" width="452" height="10" fill="#E4161B"/><rect x="14" y="' + (sy + 10) + '" width="452" height="4" fill="#000" opacity=".5"/>';
+      for (var i = 0; i < 6; i++) {
+        var cx = 62 + i * 71, h = 26 + (i + t * 6) * 5, h2 = h * 0.78;
+        o += '<rect x="' + (cx - 13) + '" y="' + (sy - h / 2 - 3) + '" width="26" height="6" fill="#BDBDBD"/>';
+        [-1, 1].forEach(function (d) {
+          var ox = d < 0 ? cx - 34 : cx + 22, ix = d < 0 ? cx - 22 : cx + 13;
+          o += '<rect x="' + ox + '" y="' + (sy - h) + '" width="12" height="' + h + '" rx="2" fill="#2e2e2e" stroke="#EDEDED" stroke-width="1.5"/>';
+          o += '<rect x="' + ix + '" y="' + (sy - h2) + '" width="9" height="' + h2 + '" rx="2" fill="#E4161B"/>';
+        });
+      }
+    });
+    o += '</svg>';
+    document.getElementById('rack').innerHTML = o;
+  }
+  buildRack();
+
+  /* ---------- Init ---------- */
+  renderTabs(); renderPlans(); updateSummary();
+  show(location.hash.slice(1) || 'home');
+})();
+</script>
+</body>
+</html>
